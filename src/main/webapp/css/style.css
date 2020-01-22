@@ -1,0 +1,25 @@
+body {
+	background-image: url(/images/pic1.jpg);
+}
+#form{
+	background-color: green;
+}.registration{
+	font-size: 50px;
+	font-family: Agency FB;
+	font-weight: 700;
+	border-bottom-style: ridge;
+}
+.text{
+	height: 43px;
+}.label{
+	font-size: 20px;
+}
+thead{
+	background-color: lightblue;
+	color: black;
+	font-size: 30px;
+	font-family: Agency FB;
+}
+tbody{
+	color: white;
+}

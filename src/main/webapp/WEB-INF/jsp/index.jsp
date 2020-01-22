@@ -9,34 +9,44 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-	<h2>Todo Items</h2>
-	<a href="${pageContext.request.contextPath}/todo/create" type="button" class="btn btn-primary">New</a>
-	<table class="table table-borderless">
-		<thead>
-			<tr>
-				<td><label>Title</label></td>
-				<td><label>Completed</label></td>
-				<td><label>Action</label></td>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach var="todo" items="${todos}">
-				<tr>
-					<td>${todo.title}</td>
-					<td>${todo.completed}</td>
-					<td><a
-						href="${pageContext.request.contextPath}/todo/edit/${todo.id}">Edit</a>
-						&nbsp; <a
-						href="${pageContext.request.contextPath}/todo/complete/${todo.id}">Complete</a>
-						&nbsp; <a
-						href="${pageContext.request.contextPath}/todo/delete/${todo.id}">Delete</a>
-					</td>
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-md-offset-12" id="form">
+				<center>
+					<b class="registration">Todo Items</b>
+				</center>
+				<a href="${pageContext.request.contextPath}/todo/create"
+					type="button" class="btn btn-primary">New</a>
+				<table class="table">
+					<thead>
+						<tr>
+							<td><label>Title</label></td>
+							<td><label>Completed</label></td>
+							<td><label>Action</label></td>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach var="todo" items="${todos}">
+							<tr>
+								<td>${todo.title}</td>
+								<td>${todo.completed}</td>
+								<td><a
+									href="${pageContext.request.contextPath}/todo/edit/${todo.id}" class="btn btn-primary">Edit</a>
+									&nbsp; <a
+									href="${pageContext.request.contextPath}/todo/complete/${todo.id}" class="btn btn-primary">Complete</a>
+									&nbsp; <a
+									href="${pageContext.request.contextPath}/todo/delete/${todo.id}" class="btn btn-danger">Delete</a>
+								</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
 		crossorigin="anonymous"></script>
