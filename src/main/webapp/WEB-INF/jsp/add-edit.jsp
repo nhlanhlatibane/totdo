@@ -16,12 +16,25 @@
 </head>
 <body>
 <body>
+	<nav class="navbar navbar-expand-lg" role="navigation">
+		<div class="container">
+		<p>
+                <a href="${pageContext.request.contextPath}/" class="btn btn-info btn-lg">
+                  <span class="glyphicon glyphicon-home"></span> Home
+                </a>
+              </p>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="col-md-12 col-md-offset-12">
+			<center>
+				<b class="registration">${modeTitle}TODO</b>
+			</center>
+		</div>
+	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-md-offset-12" id="form">
-				<center>
-					<b class="registration">${modeTitle}TODO</b>
-				</center>
 				<form:form id="formvalidation"
 					action="${pageContext.request.contextPath}/todo/${mode}"
 					method="post" modelAttribute="todo">
@@ -44,33 +57,6 @@
 			</div>
 		</div>
 	</div>
-
-	<!-- 	<form:form id="formvalidation"
-		action="${pageContext.request.contextPath}/todo/${mode}" method="post"
-		modelAttribute="todo">
-		<form:hidden path="id" />
-		<table>
-			<tr>
-				<td><form:label path="title">Title</form:label></td>
-				<td><form:input id="title" path="title"></form:input></td>
-
-				<td><form:errors path="title"></form:errors></td>
-
-			</tr>
-			<tr>
-				<td><form:label path="description">Description</form:label></td>
-				<td><form:textarea id="description" path="description"
-						cols="40" required="true" rows="15"></form:textarea></td>
-				<td><form:errors path="description"></form:errors></td>
-			</tr>
-			<tr>
-				<td><label>Actions</label></td>
-				<td><form:button class="btn btn-primary" name="cancel">Cancel</form:button>
-					&nbsp; <input class="btn btn-primary" type="submit" name="submit"
-					value="Submit"></td>
-			</tr>
-		</table>
-	</form:form> -->
 
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

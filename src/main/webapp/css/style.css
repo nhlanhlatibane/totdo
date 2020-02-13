@@ -1,25 +1,57 @@
 body {
 	background-image: url(/images/pic1.jpg);
 }
-#form{
-	background-color: green;
-}.registration{
+
+#form {
+	background-color: #ffffff;
+	
+}
+
+.registration {
 	font-size: 50px;
 	font-family: Agency FB;
 	font-weight: 700;
-	border-bottom-style: ridge;
+	border-bottom-style: double;
+	color: #ff0080;
 }
-.text{
+.btn{
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+.text {
 	height: 43px;
-}.label{
+}
+
+.label {
 	font-size: 20px;
 }
-thead{
+
+.navbar {
+	background-color: #008000;
+}
+
+thead {
 	background-color: lightblue;
 	color: black;
 	font-size: 30px;
 	font-family: Agency FB;
 }
-tbody{
+
+tbody {
+	color: #400040;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: red;
 	color: white;
+	text-align: center;
 }
